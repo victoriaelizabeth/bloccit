@@ -1,4 +1,5 @@
 require 'random_data'
+include RandomData
 
 # Create Posts
 50.times do
@@ -20,7 +21,7 @@ posts = Post.all
 end
 
 puts "#{Post.count}"
-Post.find_or_create_by(title: "Victoria's App", body: "Victoria's Text")
+Post.find_or_create_by(title: "A unique title", body: "A unique body")
 puts "#{Post.count}"
 
 puts "Seed finished"
