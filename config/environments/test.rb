@@ -34,6 +34,8 @@ Rails.application.configure do
   # ActionMailer::Base.deliveries array.
   config.action_mailer.delivery_method = :test
 
+  config.active_record.maintain_test_schema = true
+
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
 
