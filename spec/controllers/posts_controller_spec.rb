@@ -28,7 +28,7 @@ RSpec.describe PostsController, type: :controller do
 
     describe "GET new" do
       it "returns http redirect" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to redirect_to(new_session_path)
       end
     end
@@ -89,17 +89,17 @@ RSpec.describe PostsController, type: :controller do
 
     describe "GET new" do
       it "returns http success" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to have_http_status(:success)
       end
 
       it "renders the #new view" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to render_template :new
       end
 
       it "instantiates @post" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(assigns(:post)).not_to be_nil
       end
     end
@@ -170,17 +170,17 @@ RSpec.describe PostsController, type: :controller do
 
     describe "GET new" do
       it "returns http success" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to have_http_status(:success)
       end
 
       it "renders the #new view" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to render_template :new
       end
 
       it "instantiates @post" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(assigns(:post)).not_to be_nil
       end
     end
@@ -283,17 +283,17 @@ RSpec.describe PostsController, type: :controller do
 
     describe "GET new" do
       it "returns http success" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to have_http_status(:success)
       end
 
       it "renders the #new view" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(response).to render_template :new
       end
 
       it "instantiates @post" do
-        get :new, params: topic_id: my_topic.id
+        get :new, params: { topic_id: my_topic.id }
         expect(assigns(:post)).not_to be_nil
       end
     end
